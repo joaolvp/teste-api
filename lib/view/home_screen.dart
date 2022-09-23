@@ -22,13 +22,16 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/fetchdata');}, child: const Text('Fetch Data')),
+              const SizedBox(width: 12,),
               ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/senddata');}, child: const Text('Send Data')),
             ],
           ),
+          const SizedBox(height: 12,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/updatedata');}, child: const Text('Update Data')),
+              const SizedBox(width: 12,),
               ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/deletedata');}, child: const Text('Delete Data')),
             ],
           )

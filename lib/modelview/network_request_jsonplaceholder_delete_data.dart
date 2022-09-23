@@ -2,17 +2,13 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../model/album_jsonplaceholder.dart';
 
-Future<Album> deleteAlbum(int id) async {
-  print('passei por aqui, $id');
+Future<Album> deleteAlbum(String id) async {
   final http.Response response = await http.delete(
-    Uri.parse('https://jsonplaceholder.typicode.com/albums/2'),
+    Uri.parse('https://jsonplaceholder.typicode.com/albums/$id'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
   );
-  print('Resposta:');
-  print(response.body);
-  print(response.statusCode);
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,

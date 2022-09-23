@@ -42,11 +42,11 @@ class _DeleteDataState extends State<DeleteData> {
                     Text(snapshot.data?.title ?? 'Deleted'),
                     ElevatedButton(
                       child: const Text('Delete Data'),
-                      onPressed: ()  async {
-                        int id_final =  snapshot.data!.id;
-                        print(id_final);
-                           _futureAlbum =  deleteAlbum(id_final);
-                           print(_futureAlbum);
+                      onPressed: () {
+                        setState(() {
+                          _futureAlbum =
+                              deleteAlbum(snapshot.data!.id.toString());
+                        });
                       },
                     ),
                   ],

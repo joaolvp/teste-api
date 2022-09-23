@@ -53,7 +53,7 @@ class _SendDataState extends State<SendData> {
       future: _futureAlbum,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Text(snapshot.data!.title);
+          return Text(snapshot.data!.title!);
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
         }

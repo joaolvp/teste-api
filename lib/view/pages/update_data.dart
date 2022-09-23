@@ -39,7 +39,7 @@ class _UpdateDataState extends State<UpdateData> {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(snapshot.data!.title),
+                    Text(snapshot.data!.title!),
                     TextField(
                       controller: _controller,
                       decoration: const InputDecoration(
